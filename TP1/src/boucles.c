@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int compteur = 5;
+    int compteur = 8;
 
     printf("=== Triangle rectangle avec des boucles for ===\n\n");
 
@@ -17,3 +17,4 @@ int main() {
 
     return 0;
 }
+
