@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int num1 = 10;
-    int num2 = 3;
-    char op = '+';
+    int num1 = 5;
+    int num2 = 4;
+    char op = '*';
     int resultat;
 
     printf("=== Opérations avec switch ===\n");
@@ -64,5 +64,6 @@ int main() {
 
     return 0;
 }
+
 
 
