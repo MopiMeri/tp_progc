@@ -1,19 +1,13 @@
-/*
- * SPDX-FileCopyrightText: 2021 John Samuel
- *
- * SPDX-License-Identifier: GPL-3.0-or-later
- *
- */
+#ifndef SERVEUR_H
+#define SERVEUR_H
 
-#ifndef __SERVER_H__
-#define __SERVER_H__
+#define SERVER_PORT 9090
+#define MAX_MSG     1000
 
-#define PORT 8089
+int create_server_socket(void);
+int send_all(int sock, const char *buf, int len);
+int recv_line(int sock, char *out, int max);
 
-/* accepter la nouvelle connection d'un client et lire les données
- * envoyées par le client. En suite, le serveur envoie un message
- * en retour
- */
-int renvoie_message(int, char *);
+int recois_numeros_calcule(const char *msg, char *op, double *a, int *has_b, double *b);
 
 #endif

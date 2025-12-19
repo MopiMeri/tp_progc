@@ -1,22 +1,14 @@
-/*
- * SPDX-FileCopyrightText: 2021 John Samuel
- *
- * SPDX-License-Identifier: GPL-3.0-or-later
- *
- */
+#ifndef CLIENT_H
+#define CLIENT_H
 
-#ifndef __CLIENT_H__
-#define __CLIENT_H__
+#define SERVER_IP   "127.0.0.1"
+#define SERVER_PORT 9090
+#define MAX_MSG     1000
 
-/*
- * port d'ordinateur pour envoyer et recevoir des messages
- */
-#define PORT 8089
+int connect_server(void);
+int send_all(int sock, const char *buf, int len);
+int recv_line(int sock, char *out, int max);
 
-/*
- * Fonction d'envoi et de réception de messages
- * Il faut un argument : l'identifiant de la socket
- */
-int envoie_recois_message(int socketfd);
+int envoie_operateur_numeros(int sock, char op, double a, int has_b, double b);
 
 #endif
